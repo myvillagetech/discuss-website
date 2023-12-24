@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Diskuss</title>
+    <title>Document</title>
     <link href='https://fonts.googleapis.com/css?family=Outfit' rel='stylesheet'>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -316,8 +316,8 @@
                     </div>
 
                     <div class="images">
-                        <!-- <img class="iPhone" src="Assets/images/iMockup - iPhone 15 Pro Max.png" alt=""> -->
-                        <img class="sideIMGs" src="Assets/images/Group 9243.png" alt="">
+                        <img class="iPhone" src="Assets/images/iMockup - iPhone 15 Pro Max.png" alt="">
+                        <img class="sideIMGs" src="Assets/images/Group 9242.png" alt="">
                     </div>
                 </div>
             </div>
@@ -335,10 +335,10 @@
                             <h3>Goal</h3>
                             <p>Our goal is to simplify management, making it accessible for all</p>
                         </div>
-                        <img src="Assets/images/Frame 9985.png" alt="">
+                        <img src="Assets/images/aboutus1.png" alt="">
                     </div>
                     <div class="card pt-0">
-                        <img src="Assets/images/Frame 9986.png" alt="">
+                        <img src="Assets/images/aboutus2.png" alt="">
                         <div class="content">
                             <h3>Mission</h3>
                             <p> We empower tasks for everyone, fostering productivity with simplicity and accessibility
@@ -351,7 +351,7 @@
                             <p> Visionary task management, inclusive for all pioneering simplicity in every interaction
                             </p>
                         </div>
-                        <img src="Assets/images/Frame 9987.png" alt="">
+                        <img src="Assets/images/aboutus3.png" alt="">
                     </div>
 
                 </div>
@@ -619,92 +619,12 @@
                                 form</span>
                             below for prompt support
                             and collaboration.</h4>
-
-                            <form id="myForm">
-                                <input type="text" id="nameInput" placeholder="Enter your name" required />
-                                <input type="email" id="emailInput" placeholder="Email address" required />
-                                <input class="text_area" type="text" id="messageInput" placeholder="Message" required>
-                                <button class="btn" type="submit" id="submitButton">Submit</button>
-                                <div id="successMessage"></div>
-                            </form>
-                            
-                            <script>
-                                document.addEventListener('DOMContentLoaded', function () {
-                                    document.getElementById('myForm').addEventListener('submit', function (event) {
-                                        event.preventDefault();
-                            
-                                        var nameInput = document.getElementById('nameInput');
-                                        var emailInput = document.getElementById('emailInput');
-                                        var messageInput = document.getElementById('messageInput');
-                                        var successMessage = document.getElementById('successMessage');
-                            
-                                        var existingErrorMessage = document.getElementById('emailErrorMessage');
-                                        if (existingErrorMessage) {
-                                            existingErrorMessage.parentNode.removeChild(existingErrorMessage);
-                                        }
-                            
-                                        var name = nameInput.value;
-                                        var email = emailInput.value;
-                                        var message = messageInput.value;
-                            
-                                        var emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                                        if (!emailRegex.test(email)) {
-                                            var errorMessage = document.createElement('span');
-                                            errorMessage.textContent = 'Please enter a valid email address.';
-                                            errorMessage.style.color = 'red';
-                                            errorMessage.id = 'emailErrorMessage';
-                            
-                                            emailInput.parentNode.insertBefore(errorMessage, emailInput.nextSibling);
-                                            return false; 
-                                        }
-                            
-                                        // Validate if name and message fields are empty
-                                        if (name.trim() === '' || message.trim() === '') {
-                                            var emptyFieldsError = document.createElement('span');
-                                            emptyFieldsError.textContent = 'Name and message are required fields.';
-                                            emptyFieldsError.style.color = 'red';
-                                            emptyFieldsError.id = 'emptyFieldsErrorMessage';
-                            
-                                            var form = document.getElementById('myForm');
-                                            form.insertBefore(emptyFieldsError, form.firstChild);
-                                            return false;
-                                        }
-                            
-                                        var data = {
-                                            name: name,
-                                            email: email,
-                                            message: message
-                                        };
-
-                                    fetch('https://worksapp.onrender.com/worksapp/enquires', {
-                                        method: 'POST',
-                                        headers: {
-                                            'Content-Type': 'application/json'
-                                        },
-                                        body: JSON.stringify(data)
-                                    })
-                                        .then(response => {
-                                            if (response.ok) {
-                                                successMessage.textContent = 'Submitted successfully';
-                                                setTimeout(function () {
-                                                    nameInput.value = '';
-                                                    emailInput.value = '';
-                                                    messageInput.value = '';
-                                                    successMessage.textContent = '';
-                                                }, 3000);
-                                                return response.json();
-                                            }
-                                            throw new Error('Network response was not ok.');
-                                        })
-                                        .then(data => {
-                                            console.log('Response from server:', data);
-                                        })
-                                        .catch(error => {
-                                            console.error('There was a problem with the fetch operation:', error);
-                                        });
-                                });
-                            });
-                        </script>
+                        <form>
+                            <input type="text" placeholder="Enter your name" />
+                            <input type="text" placeholder="Email address" />
+                            <input class="text_area" type="text" placeholder="Message">
+                            <button class="btn">Submit</button>
+                        </form>
                     </div>
                 </div>
             </div>

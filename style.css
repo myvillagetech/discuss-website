@@ -511,11 +511,12 @@ h6 {
   /* inset: 0; */
   z-index: revert-layer;
   width: 307.951px;
-  height: 638px;
+  height: 600px;
 }
 
 .sideIMGs {
   position: absolute;
+  top: 66px;
 }
 
 .about_us {
@@ -584,7 +585,7 @@ h6 {
 
 .about_us .cards .card img {
   width: 100%;
-  height: 452.849px;
+  height: 400.849px;
 }
 
 /* testimaonal */
@@ -1233,9 +1234,3 @@ footer .container .contact_info {
     margin-bottom: 10px;
   }
 }
-
-input[type="text"], input[type="email"], textarea {
-  text-transform: none;
-}
-
-
